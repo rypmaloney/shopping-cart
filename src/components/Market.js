@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from "react";
+
 import Product from "./Product.js";
 import Header from "./Header.js";
-import inventory from "./inventory.js";
+//import inventory from "./inventory.js";
 
 
 function Market(props) {
-    const [products, setProducts] = useState(inventory);
-
+    //const [products, setProducts] = useState(inventory);
+    const {products, setProducts} = props
     const findBookIndex = (e)=> {
         let index = products.findIndex(
             (element) => element.id === e.target.name
@@ -64,4 +64,5 @@ function Market(props) {
 }
 
 
-export default Market;
+export default Market 
+
