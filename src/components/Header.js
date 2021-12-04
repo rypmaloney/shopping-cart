@@ -1,10 +1,9 @@
-
 function Header() {
     return (
-      <div>
-      <h1>Header</h1>
-      </div>
+        <header>
+            <h1>Murakami Library</h1>
+        </header>
     );
-  }
-  
-  export default Header;
+}
+
+export default Header;
