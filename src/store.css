@@ -42,8 +42,11 @@ h1 {
     margin: 40px auto;
     padding: 20px;
     width: 200px;
-    height: 250px;
-    border: 1px solid seagreen;
+    height: 350px;
+    /* border: 1px solid seagreen; */
+}
+.product-card p {
+    font-size: 11px;
 }
 
 .product-card input {
@@ -51,6 +54,13 @@ h1 {
     text-align: center;
     outline: none;
     border: 1px solid ghostwhite;
+}
+
+.product-card img{
+    width:200px;
+    height: 275px;
+    box-shadow: 10px 5px 20px gray;
+    object-fit: cover;
 }
 
 .incdec{

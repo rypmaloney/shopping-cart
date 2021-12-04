@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import Product from "./Product.js";
 import Header from "./Header.js";
 import inventory from "./inventory.js";
+
+
 function Market(props) {
     const [products, setProducts] = useState(inventory);
 
@@ -27,6 +29,16 @@ function Market(props) {
         productsEditor[index].number--;
         setProducts(productsEditor);
     };
+    const handleNumChange = (e) => {
+        let index = products.findIndex(
+            (element) => element.id === e.target.name
+        );
+        let productsEditor = products.slice();
+        productsEditor[index].number = e.target.value;
+
+        setProducts(productsEditor)
+
+    };
 
     return (
         <div>
@@ -41,6 +53,9 @@ function Market(props) {
                             dec={decrement}
                             id={prod.id}
                             inc={increment}
+                            image={prod.image}
+                            key={prod.key}
+                            handleNumChange={handleNumChange}
                         />
                     );
                 })}
