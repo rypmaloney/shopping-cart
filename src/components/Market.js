@@ -6,43 +6,8 @@ import Header from "./Header.js";
 
 function Market(props) {
     //const [products, setProducts] = useState(inventory);
-    const {products, setProducts, updateCount} = props
-    const findBookIndex = (e)=> {
-        let index = products.findIndex(
-            (element) => element.id === e.target.name
-        );
-        return index
-    }
-    const increment = (e) => {
-        let productsEditor = [...products]
-
-        productsEditor[findBookIndex(e)].number++;
-        setProducts(productsEditor);
-    };
-    const decrement = (e) => {
-        let productsEditor = [...products]
-        productsEditor[findBookIndex(e)].number--;
-        setProducts(productsEditor);
-    };
-    const handleNumChange = (e) => {
-        let productsEditor = products.slice();
-        productsEditor[findBookIndex(e)].number = e.target.value;
-        setProducts(productsEditor)
-    };
-
-    const addToCart = (e) => {
-        let productsEditor = [...products];
-        productsEditor[findBookIndex(e)].cart = true;
-        setProducts(productsEditor)
-        updateCount()
-    }
-    const removeFromCart = (e) => {
-        let productsEditor = [...products];
-        productsEditor[findBookIndex(e)].cart = false;
-        productsEditor[findBookIndex(e)].number = 0;
-        setProducts(productsEditor)
-        updateCount()
-    }
+    const {products, increment, decrement, handleNumChange, addToCart, removeFromCart} = props
+    
 
     return (
         <div>

@@ -6,9 +6,7 @@ import RouteSwitch from "./Route";
 
 ReactDOM.render(
     <React.StrictMode>
-       
         <RouteSwitch />
-        
     </React.StrictMode>,
     document.getElementById("root")
 );

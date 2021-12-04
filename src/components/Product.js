@@ -19,9 +19,9 @@ function Product(props) {
             </button>
             <div>
                 {isInCart ? (
-                    <button name={id} onClick={removeFromCart}>Remove from Cart</button>
+                    <button name={id} onClick={removeFromCart}>Remove all from cart</button>
                 ) : (
-                    <button name={id} onClick={addToCart}>Add to Cart</button>
+                    <button name={id} onClick={addToCart}>Add to cart</button>
                 )}
             </div>
         </div>
