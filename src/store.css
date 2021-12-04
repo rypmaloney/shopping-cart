@@ -45,3 +45,21 @@ h1 {
     height: 250px;
     border: 1px solid seagreen;
 }
+
+.product-card input {
+    width: 20px;
+    text-align: center;
+    outline: none;
+    border: 1px solid ghostwhite;
+}
+
+.incdec{
+    width: 15px;
+    height: 15px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: gainsboro;
+    border: 1px solid snow;
+    margin: 3px;
+    padding: 0 ;
+}
