@@ -25,13 +25,22 @@ function Market(props) {
         setProducts(productsEditor);
     };
     const handleNumChange = (e) => {
-        let index = products.findIndex(
-            (element) => element.id === e.target.name
-        );
         let productsEditor = products.slice();
-        productsEditor[index].number = e.target.value;
+        productsEditor[findBookIndex(e)].number = e.target.value;
         setProducts(productsEditor)
     };
+
+    const addToCart = (e) => {
+        let productsEditor = [...products];
+        productsEditor[findBookIndex(e)].cart = true;
+        setProducts(productsEditor)
+    }
+    const removeFromCart = (e) => {
+        let productsEditor = [...products];
+        productsEditor[findBookIndex(e)].cart = false;
+        productsEditor[findBookIndex(e)].number = 0;
+        setProducts(productsEditor)
+    }
 
     return (
         <div>
@@ -49,6 +58,9 @@ function Market(props) {
                             image={prod.image}
                             key={prod.key}
                             handleNumChange={handleNumChange}
+                            isInCart={prod.cart}
+                            addToCart={addToCart}
+                            removeFromCart={removeFromCart}
                         />
                     );
                 })}
