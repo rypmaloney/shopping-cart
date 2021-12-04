@@ -7,26 +7,21 @@ import inventory from "./inventory.js";
 function Market(props) {
     const [products, setProducts] = useState(inventory);
 
-    const increment = (e) => {
-        //find the product that has been clicked in the state array
+    const findBookIndex = (e)=> {
         let index = products.findIndex(
             (element) => element.id === e.target.name
         );
-        console.log(index);
-        let productsEditor = products.slice();
+        return index
+    }
+    const increment = (e) => {
+        let productsEditor = [...products]
 
-        productsEditor[index].number++;
+        productsEditor[findBookIndex(e)].number++;
         setProducts(productsEditor);
     };
     const decrement = (e) => {
-        //find the product that has been clicked in the state array
-        let index = products.findIndex(
-            (element) => element.id === e.target.name
-        );
-        console.log(index);
-        let productsEditor = products.slice();
-
-        productsEditor[index].number--;
+        let productsEditor = [...products]
+        productsEditor[findBookIndex(e)].number--;
         setProducts(productsEditor);
     };
     const handleNumChange = (e) => {
@@ -35,9 +30,7 @@ function Market(props) {
         );
         let productsEditor = products.slice();
         productsEditor[index].number = e.target.value;
-
         setProducts(productsEditor)
-
     };
 
     return (
@@ -69,5 +62,6 @@ function Market(props) {
         </div>
     );
 }
+
 
 export default Market;

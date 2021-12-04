@@ -16,6 +16,7 @@ function Product(props) {
             <button name={id} className="incdec" onClick={dec}>
                 -
             </button>
+            <button>Add to Cart</button>
         </div>
     );
 }
