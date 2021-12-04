@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Home from "./components/Home";
 import Market from "./components/Market";
 import Cart from "./components/Cart";
@@ -12,14 +12,24 @@ const RouteSwitch = () => {
     const [products, setProducts] = useState(inventory);
     const [cartCount, setCartCount] = useState(0);
 
-    const updateCount = () => {
+
+    useEffect(() => {
       let count = 0;
       for (let i=0; i<products.length; i++){
         if (products[i].cart===true){
          count += products[i].number
         }
       } setCartCount(count)
-    }
+    },[products]); 
+
+    // const updateCount = () => {
+    //   let count = 0;
+    //   for (let i=0; i<products.length; i++){
+    //     if (products[i].cart===true){
+    //      count += products[i].number
+    //     }
+    //   } setCartCount(count)
+    // }
     const findBookIndex = (e)=> {
       let index = products.findIndex(
           (element) => element.id === e.target.name
@@ -47,14 +57,12 @@ const RouteSwitch = () => {
       let productsEditor = [...products];
       productsEditor[findBookIndex(e)].cart = true;
       setProducts(productsEditor)
-      updateCount()
   }
   const removeFromCart = (e) => {
       let productsEditor = [...products];
       productsEditor[findBookIndex(e)].cart = false;
       productsEditor[findBookIndex(e)].number = 0;
       setProducts(productsEditor)
-      updateCount()
   }
 
 
@@ -69,7 +77,6 @@ const RouteSwitch = () => {
                         <Market
                             products={products}
                             setProducts={setProducts}
-                            updateCount={updateCount}
                             increment={increment}
                             decrement={decrement}
                             findBookIndex={findBookIndex}
