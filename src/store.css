@@ -61,6 +61,7 @@ h1 {
     height: 275px;
     box-shadow: 10px 5px 20px gray;
     object-fit: cover;
+    position: absolute;
 }
 
 .incdec{
@@ -73,6 +74,60 @@ h1 {
     margin: 3px;
     padding: 0 ;
 }
+
+
+
+.learn {
+    float: left;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 200px;
+    height: 275px;
+    z-index: 1000;
+    cursor: pointer;
+    color: rgba(240, 255, 240, 0);
+    transition:background-color 1s;
+
+
+}
+
+.learn:hover{
+    color:rgb(63, 68, 63);
+    background-color: rgba(255, 255, 240, 0.342);
+}
+
+.learn p{
+    top:20px;
+}
+
+.img-container{
+    width: 200px;
+    height: 275px;
+    position: relative;
+}
+.product-info-container{
+
+}
+
+.show{
+    max-height: 500px;
+    transition: height, 1s;
+    overflow: auto;
+
+}
+
+.hide{
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height, 1s;
+}
+
+
+
+
+
+
 
 .cart{
     margin: 10%;
