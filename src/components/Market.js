@@ -6,7 +6,7 @@ import Header from "./Header.js";
 
 function Market(props) {
     //const [products, setProducts] = useState(inventory);
-    const {products, increment, decrement, handleNumChange, addToCart, removeFromCart, findBookIndex} = props
+    const {products, increment, decrement, handleNumChange, addToCart, removeFromCart} = props
     
 
     return (
