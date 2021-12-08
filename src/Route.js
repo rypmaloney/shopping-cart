@@ -12,15 +12,22 @@ const RouteSwitch = () => {
     const [products, setProducts] = useState(inventory);
     const [cartCount, setCartCount] = useState(0);
 
-
     useEffect(() => {
-      let count = 0;
-      for (let i=0; i<products.length; i++){
-        if (products[i].cart===true){
-         count += products[i].number
+        let count = 0;
+        for (let i = 0; i < products.length; i++) {
+            if (products[i].cart === true) {
+                count += products[i].number;
+            }
+
+            let productsEditor = [...products]
+            if(products[i].number===0){
+              productsEditor[i].cart = false
+            }
+
         }
-      } setCartCount(count)
-    },[products]); 
+        
+        setCartCount(count);
+    }, [products]);
 
     // const updateCount = () => {
     //   let count = 0;
@@ -30,41 +37,41 @@ const RouteSwitch = () => {
     //     }
     //   } setCartCount(count)
     // }
-    const findBookIndex = (e)=> {
-      let index = products.findIndex(
-          (element) => element.id === e.target.name
-      );
-      return index
-  }
-  const increment = (e) => {
-      let productsEditor = [...products]
+    const findBookIndex = (e) => {
+        let index = products.findIndex(
+            (element) => element.id === e.target.name
+        );
+        return index;
+    };
+    const increment = (e) => {
+        let productsEditor = [...products];
 
-      productsEditor[findBookIndex(e)].number++;
-      setProducts(productsEditor);
-  };
-  const decrement = (e) => {
-      let productsEditor = [...products]
-      productsEditor[findBookIndex(e)].number--;
-      setProducts(productsEditor);
-  };
-  const handleNumChange = (e) => {
-      let productsEditor = products.slice();
-      productsEditor[findBookIndex(e)].number = e.target.value;
-      setProducts(productsEditor)
-  };
+        productsEditor[findBookIndex(e)].number++;
+        setProducts(productsEditor);
+    };
+    const decrement = (e) => {
+        let productsEditor = [...products];
+        productsEditor[findBookIndex(e)].number--;
+        setProducts(productsEditor);
+    };
+    const handleNumChange = (e) => {
+        let productsEditor = products.slice();
+        productsEditor[findBookIndex(e)].number = e.target.value;
 
-  const addToCart = (e) => {
-      let productsEditor = [...products];
-      productsEditor[findBookIndex(e)].cart = true;
-      setProducts(productsEditor)
-  }
-  const removeFromCart = (e) => {
-      let productsEditor = [...products];
-      productsEditor[findBookIndex(e)].cart = false;
-      productsEditor[findBookIndex(e)].number = 0;
-      setProducts(productsEditor)
-  }
+        setProducts(productsEditor);
+    };
 
+    const addToCart = (e) => {
+        let productsEditor = [...products];
+        productsEditor[findBookIndex(e)].cart = true;
+        setProducts(productsEditor);
+    };
+    const removeFromCart = (e) => {
+        let productsEditor = [...products];
+        productsEditor[findBookIndex(e)].cart = false;
+        productsEditor[findBookIndex(e)].number = 0;
+        setProducts(productsEditor);
+    };
 
     return (
         <BrowserRouter>
@@ -83,11 +90,22 @@ const RouteSwitch = () => {
                             handleNumChange={handleNumChange}
                             addToCart={addToCart}
                             removeFromCart={removeFromCart}
-
                         />
                     }
                 />
-                <Route path="/cart" element={<Cart products={products} />} />
+                <Route
+                    path="/cart"
+                    element={
+                        <Cart
+                            products={products}
+                            inc={increment}
+                            dec={decrement}
+                            handleNumChange={handleNumChange}
+                            addToCart={addToCart}
+                            removeFromCart={removeFromCart}
+                        />
+                    }
+                />
             </Routes>
             <Footer />
         </BrowserRouter>

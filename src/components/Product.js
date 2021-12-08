@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 function Product(props) {
     const [infoState, setInfoState] = useState("hide");
@@ -14,24 +13,22 @@ function Product(props) {
         isInCart,
         addToCart,
         removeFromCart,
-
     } = props;
 
-const handleBookClick = (e) => {
-    infoState==="hide"? setInfoState("show"):setInfoState("hide")
-
-}
-
+    const handleBookClick = (e) => {
+        infoState === "hide" ? setInfoState("show") : setInfoState("hide");
+    };
 
     return (
         <div className="product-card">
             <div name={id} onClick={handleBookClick} className="img-container">
                 <div className="learn">
                     <h2>Learn More</h2>
+                    
                 </div>
                 <img alt={`Cover for the book ${title}`} src={image}></img>
             </div>
-            <div name={id}  className={`product-info-container ${infoState} `}>
+            <div name={id} className={`product-info-container ${infoState} `}>
                 <p>{title}</p>
                 <button name={id} className="incdec" onClick={inc}>
                     +

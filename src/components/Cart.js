@@ -1,18 +1,50 @@
 function Cart(props) {
-    const { products } = props;
+    const { products, inc, handleNumChange, dec, removeFromCart, addToCart } =
+        props;
     return (
         <div className="cart">
             <h1>Cart</h1>
-            {products.map((prod) => {
-                if (prod.cart === true) {
-                    return (
-                        <div>
-                            <p>{prod.title}</p>
-                            <p>{prod.number}</p>
-                        </div>
-                    );
-                } else return null;
-            })}
+            <ul>
+                {products.map((prod) => {
+                    if (prod.cart === true) {
+                        return (
+                            <li>
+                                <div className="cart-list">
+                                    <img
+                                        alt={`Cover for the book ${prod.title}`}
+                                        src={prod.image}
+                                    ></img>
+                                    <div className="cart-book-info">
+                                        <p>
+                                            {prod.title} x {prod.number}
+                                        </p>
+                                        <button
+                                            name={prod.id}
+                                            className="incdec"
+                                            onClick={inc}
+                                        >
+                                            +
+                                        </button>
+                                        <input
+                                            name={prod.id}
+                                            type="text"
+                                            value={prod.number}
+                                            onChange={handleNumChange}
+                                        ></input>
+                                        <button
+                                            name={prod.id}
+                                            className="incdec"
+                                            onClick={dec}
+                                        >
+                                            -
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                        );
+                    } else return null;
+                })}
+            </ul>
         </div>
     );
 }
