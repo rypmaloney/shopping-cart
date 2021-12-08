@@ -32,12 +32,6 @@ function Market(props) {
                         />
                     );
                 })}
-                <Product />
-                <Product />
-                <Product />
-                <Product />
-                <Product />
-                <Product />
             </div>
         </div>
     );
