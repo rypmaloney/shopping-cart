@@ -1,5 +1,8 @@
 body {
-    font-family: "Source Code Pro", monospace;
+    font-family: "Exo", sans-serif;
+    background-image: url("./images/text3.png");
+    background-size: 1000px;
+
 }
 
 header {
@@ -50,8 +53,10 @@ button:hover{
     flex-direction: row;
     flex-wrap: wrap;
     align-items: flex-end;
+    background-color: rgba(237, 242, 248, 0.856);
+     /*box-shadow: 15px 20px 50px  rgb(207, 207, 207);
     background-image: url("./images/text3.png");
-    background-size: 500px;
+    background-size: 500px; */
 }
 
 .product-card {
@@ -132,7 +137,14 @@ input {
     text-align: center;
     box-shadow: 10px 15px 40px rgb(8, 8, 8);
     margin-top:10px;
+    
 }
+
+.product-info-container p{
+    font-size: 14px;
+    margin: 0 3px;
+}
+
 
 .show {
     max-height: 500px;
