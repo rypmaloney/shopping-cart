@@ -1,5 +1,5 @@
 function Cart(props) {
-    const { products, inc, handleNumChange, dec, removeFromCart, addToCart } =
+    const { products, inc, handleNumChange, dec } =
         props;
     return (
         <div className="cart">

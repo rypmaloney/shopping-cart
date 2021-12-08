@@ -25,6 +25,7 @@ footer {
 }
 h1 {
     width: 100%;
+    text-align: center;
     font-family: "Exo", sans-serif;
 }
 
@@ -53,7 +54,7 @@ button:hover{
     flex-direction: row;
     flex-wrap: wrap;
     align-items: flex-end;
-    background-color: rgba(237, 242, 248, 0.856);
+    background-color: rgb(255, 255, 255);
      /*box-shadow: 15px 20px 50px  rgb(207, 207, 207);
     background-image: url("./images/text3.png");
     background-size: 500px; */
@@ -81,7 +82,7 @@ input {
 .product-card img {
     width: 200px;
     height: 275px;
-    box-shadow: 10px 15px 40px rgb(8, 8, 8);
+    box-shadow: 20px 25px 35px rgb(126, 134, 151);
     object-fit: cover;
     position: absolute;
 }
@@ -131,18 +132,29 @@ input {
     position: relative;
 }
 .product-info-container {
-    background-color: #ffffffb7;
-    position: relative;
+    background-color: #ffffff;
+    position: absolute;
     z-index: 1002;
     text-align: center;
-    box-shadow: 10px 15px 40px rgb(8, 8, 8);
+    box-shadow: 20px 25px 35px rgb(126, 134, 151);
+    border-radius: 5px;
     margin-top:10px;
-    
+    width: 200px;
 }
 
 .product-info-container p{
-    font-size: 14px;
+    font-size: 16px;
     margin: 0 3px;
+   
+}
+.exit-info {
+    position:absolute;
+    top:-10px;
+    left: 170px;
+    z-index: 1004;
+    display: block;
+    font-size: 10px;
+    color: rgb(14, 47, 51);
 }
 
 

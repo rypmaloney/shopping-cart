@@ -13,7 +13,7 @@ function Market(props) {
         <div>
             <Header />
             <div className="market">
-                <h1>Store</h1>
+                <h1>Purchase novels by Haruki Murakami:</h1>
                 {products.map((prod) => {
                     return (
                         <Product

@@ -15,6 +15,16 @@ import uniqid from "uniqid";
 
 const inventory = [
     {
+        title: "Dance Dance Dance",
+        id: "dance",
+        pages: 1,
+        number: 2,
+        stock: true,
+        cart: false,
+        image: dance,
+        key: uniqid(),
+    },
+    {
         title: "Hardboiled Wonderland and the End of the World",
         id:"hb",
         pages: 1,
@@ -22,6 +32,26 @@ const inventory = [
         stock: true,
         image: hardboiled,
         cart: true,
+        key: uniqid(),
+    },
+    {
+        title: "Pinball, 1973",
+        id: "pinball",
+        pages: 1,
+        number: 2,
+        stock: true,
+        cart: false,
+        image: pinball,
+        key: uniqid(),
+    },
+    {
+        title: "A Wild Sheep Chase",
+        id: "sheep",
+        pages: 1,
+        number: 2,
+        stock: true,
+        cart: false,
+        image: sheep,
         key: uniqid(),
     },
     {
@@ -64,26 +94,8 @@ const inventory = [
         image: tsukuru,
         key: uniqid(),
     },
-    {
-        title: "Dance Dance Dance",
-        id: "dance",
-        pages: 1,
-        number: 2,
-        stock: true,
-        cart: false,
-        image: dance,
-        key: uniqid(),
-    },
-    {
-        title: "A Wild Sheep Chase",
-        id: "sheep",
-        pages: 1,
-        number: 2,
-        stock: true,
-        cart: false,
-        image: sheep,
-        key: uniqid(),
-    },
+
+
     {
         title: "Killing Commendatore",
         id: "killing",
@@ -112,16 +124,6 @@ const inventory = [
         stock: true,
         cart: false,
         image: sputnik,
-        key: uniqid(),
-    },
-    {
-        title: "Pinball, 1973",
-        id: "pinball",
-        pages: 1,
-        number: 2,
-        stock: true,
-        cart: false,
-        image: pinball,
         key: uniqid(),
     },
     {

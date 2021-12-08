@@ -24,12 +24,16 @@ function Product(props) {
             <div name={id} onClick={handleBookClick} className="img-container">
                 <div className="learn">
                     <h2>Click to learn more</h2>
-                    
                 </div>
                 <img alt={`Cover for the book ${title}`} src={image}></img>
             </div>
+
             <div name={id} className={`product-info-container ${infoState} `}>
+                <button onClick={handleBookClick} className="exit-info">
+                    x
+                </button>
                 <p>{title}</p>
+
                 <button name={id} className="incdec" onClick={inc}>
                     +
                 </button>
