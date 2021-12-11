@@ -3,6 +3,7 @@ import Product from "./Product.js";
 
 
 
+
 function Market(props) {
     //const [products, setProducts] = useState(inventory);
     const {products, increment, decrement, handleNumChange, addToCart, removeFromCart} = props

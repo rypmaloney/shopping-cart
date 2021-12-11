@@ -16,17 +16,23 @@ header {
     display: flex;
     flex-direction: row;
 }
-header p {
+header .cart-link {
   margin: auto;
-  padding-right: 100px;
+    padding: 5px;
+  background-color:rgb(69, 141, 137);
+  color: #ffffff;
 
 }
 
 header h1{
     width: 500px;
     margin: auto  auto auto 100px;
+   
 }
-
+.home hr {
+    color: rgba(17, 206, 193, 0.548);
+    min-width: 300px;
+}
 
 footer {
     position: relative;
@@ -43,12 +49,13 @@ h1 {
     font-family: "Exo", sans-serif;
 }
 
-button {
+button, .cart-link {
     font-family: "Source Code Pro", monospace;
     border:1px solid ivory;
     margin: 10px;
     background-color: rgba(255, 255, 255, 0.616);
     cursor: pointer;
+    border-radius: 3px;
 
 }
 
@@ -65,21 +72,31 @@ a {
     display: flex;
     min-height: 20vh;
     flex-direction: column;
-    margin: 150px auto;
-    padding: 5% 2%;
+    margin: 150px auto 200px;
+    padding: 2%;
     background-color: #ffffff;
+    box-shadow: 10px 5px 15px rgba(49, 70, 70, 0.527);
 }
 
 
 .home{
-    width: 80%;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
 }
 
 .home button{
     outline: none;
+    background-color: rgb(150, 196, 193);
     font-size: 20px;
     margin: 0 auto;
+    color: #ffffff;
 }
+
+.home button:hover{
+    background-color:rgb(69, 141, 137);
+    color: #ffffff;
+} 
 
 
 .market {
@@ -88,7 +105,8 @@ a {
 
 .market {
     width: 70%;
-    margin: 15%;
+    margin: 10% 15%;
+    
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;

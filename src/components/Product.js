@@ -23,7 +23,7 @@ function Product(props) {
         <div className="product-card">
             <div name={id} onClick={handleBookClick} className="img-container">
                 <div className="learn">
-                    <h2>Click to learn more</h2>
+                    <h2>Click to purchase this book</h2>
                 </div>
                 <img alt={`Cover for the book ${title}`} src={image}></img>
             </div>

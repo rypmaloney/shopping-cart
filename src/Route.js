@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import Home from "./components/Home";
 import Market from "./components/Market";
@@ -74,6 +75,8 @@ const RouteSwitch = () => {
     };
 
     return (
+        <div>
+        
         <BrowserRouter>
             <Header count={cartCount} />
             <Routes>
@@ -109,7 +112,10 @@ const RouteSwitch = () => {
             </Routes>
             <Footer />
         </BrowserRouter>
+
+        </div>
     );
 };
 
 export default RouteSwitch;
+

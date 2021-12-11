@@ -1,13 +1,16 @@
+import { Link } from "react-router-dom";
+
 function Header(props) {
     const { count } = props;
     return (
         <header>
+            <Link to="/">
+                <h1>Murakami Library</h1>
+            </Link>
             
-                <h1><a href="/">Murakami Library</a></h1>
-            
-            <a href="/cart">
-                <p>Cart: {count}</p>
-            </a>
+            <Link className="cart-link" to="/cart">
+                Cart: {count} Books
+            </Link>
         </header>
     );
 }

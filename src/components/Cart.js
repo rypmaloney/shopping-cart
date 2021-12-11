@@ -1,4 +1,7 @@
+import { Link } from "react-router-dom";
+
 function Cart(props) {
+    
     const { products, inc, handleNumChange, dec } =
         props;
     return (
@@ -10,10 +13,12 @@ function Cart(props) {
                         return (
                             <li>
                                 <div className="cart-list">
+                                <Link to="/store">
                                     <img
                                         alt={`Cover for the book ${prod.title}`}
                                         src={prod.image}
                                     ></img>
+                                    </Link>
                                     <div className="cart-book-info">
                                         <p>
                                             {prod.title} x {prod.number}
