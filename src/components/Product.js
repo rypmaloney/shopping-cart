@@ -39,7 +39,7 @@ function Product(props) {
                 </button>
                 <input
                     name={id}
-                    type="text"
+                    type="number"
                     value={num}
                     onChange={handleNumChange}
                 ></input>

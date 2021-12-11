@@ -16,7 +16,7 @@ const RouteSwitch = () => {
         let count = 0;
         for (let i = 0; i < products.length; i++) {
             if (products[i].cart === true) {
-                count += products[i].number;
+                count += parseInt(products[i].number);
             }
 
             let productsEditor = [...products]
@@ -29,14 +29,6 @@ const RouteSwitch = () => {
         setCartCount(count);
     }, [products]);
 
-    // const updateCount = () => {
-    //   let count = 0;
-    //   for (let i=0; i<products.length; i++){
-    //     if (products[i].cart===true){
-    //      count += products[i].number
-    //     }
-    //   } setCartCount(count)
-    // }
     const findBookIndex = (e) => {
         let index = products.findIndex(
             (element) => element.id === e.target.name
@@ -55,7 +47,8 @@ const RouteSwitch = () => {
         setProducts(productsEditor);
     };
     const handleNumChange = (e) => {
-        let productsEditor = products.slice();
+        let productsEditor =[...products];
+        console.log(e.target.value)
         productsEditor[findBookIndex(e)].number = e.target.value;
 
         setProducts(productsEditor);
@@ -64,6 +57,7 @@ const RouteSwitch = () => {
     const addToCart = (e) => {
         let productsEditor = [...products];
         productsEditor[findBookIndex(e)].cart = true;
+        if (productsEditor[findBookIndex(e)].number === 0){productsEditor[findBookIndex(e)].number = 1}
         setProducts(productsEditor);
     };
     const removeFromCart = (e) => {

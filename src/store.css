@@ -253,3 +253,6 @@ input {
     flex-direction: column;
     padding: 10px;
 }
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
