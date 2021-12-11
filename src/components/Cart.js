@@ -40,6 +40,7 @@ function Cart(props) {
                                         </button>
                                     </div>
                                 </div>
+                                <hr />
                             </li>
                         );
                     } else return null;
