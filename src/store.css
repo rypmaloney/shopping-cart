@@ -85,7 +85,7 @@ a {
     flex-direction: column;
 }
 
-.home button{
+.home button, .purchase{
     outline: none;
     background-color: rgb(150, 196, 193);
     font-size: 20px;

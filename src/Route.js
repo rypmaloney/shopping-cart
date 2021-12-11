@@ -1,5 +1,4 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { HashRouter } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import Home from "./components/Home";
 import Market from "./components/Market";

@@ -51,6 +51,8 @@ function Cart(props) {
                     } else return null;
                 })}
             </ul>
+            <button class="purchase">Purchase</button>
+            <button><Link to="/store">Back to the store </Link></button>
         </div>
     );
 }
