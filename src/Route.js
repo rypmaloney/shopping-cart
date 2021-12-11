@@ -19,13 +19,12 @@ const RouteSwitch = () => {
                 count += parseInt(products[i].number);
             }
 
-            let productsEditor = [...products]
-            if(products[i].number===0){
-              productsEditor[i].cart = false
+            let productsEditor = [...products];
+            if (products[i].number === 0) {
+                productsEditor[i].cart = false;
             }
-
         }
-        
+
         setCartCount(count);
     }, [products]);
 
@@ -47,8 +46,7 @@ const RouteSwitch = () => {
         setProducts(productsEditor);
     };
     const handleNumChange = (e) => {
-        let productsEditor =[...products];
-        console.log(e.target.value)
+        let productsEditor = [...products];
         productsEditor[findBookIndex(e)].number = e.target.value;
 
         setProducts(productsEditor);
@@ -57,7 +55,9 @@ const RouteSwitch = () => {
     const addToCart = (e) => {
         let productsEditor = [...products];
         productsEditor[findBookIndex(e)].cart = true;
-        if (productsEditor[findBookIndex(e)].number === 0){productsEditor[findBookIndex(e)].number = 1}
+        if (productsEditor[findBookIndex(e)].number === 0) {
+            productsEditor[findBookIndex(e)].number = 1;
+        }
         setProducts(productsEditor);
     };
     const removeFromCart = (e) => {
@@ -69,46 +69,43 @@ const RouteSwitch = () => {
 
     return (
         <div>
-        
-        <BrowserRouter>
-            <Header count={cartCount} />
-            <Routes>
-                <Route exact path="/" element={<Home />} />
-                <Route
-                    path="/store"
-                    element={
-                        <Market
-                            products={products}
-                            setProducts={setProducts}
-                            increment={increment}
-                            decrement={decrement}
-                            findBookIndex={findBookIndex}
-                            handleNumChange={handleNumChange}
-                            addToCart={addToCart}
-                            removeFromCart={removeFromCart}
-                        />
-                    }
-                />
-                <Route
-                    path="/cart"
-                    element={
-                        <Cart
-                            products={products}
-                            inc={increment}
-                            dec={decrement}
-                            handleNumChange={handleNumChange}
-                            addToCart={addToCart}
-                            removeFromCart={removeFromCart}
-                        />
-                    }
-                />
-            </Routes>
-            <Footer />
-        </BrowserRouter>
-
+            <BrowserRouter>
+                <Header count={cartCount} />
+                <Routes>
+                    <Route exact path="/" element={<Home />} />
+                    <Route
+                        path="/store"
+                        element={
+                            <Market
+                                products={products}
+                                setProducts={setProducts}
+                                increment={increment}
+                                decrement={decrement}
+                                findBookIndex={findBookIndex}
+                                handleNumChange={handleNumChange}
+                                addToCart={addToCart}
+                                removeFromCart={removeFromCart}
+                            />
+                        }
+                    />
+                    <Route
+                        path="/cart"
+                        element={
+                            <Cart
+                                products={products}
+                                inc={increment}
+                                dec={decrement}
+                                handleNumChange={handleNumChange}
+                                addToCart={addToCart}
+                                removeFromCart={removeFromCart}
+                            />
+                        }
+                    />
+                </Routes>
+                <Footer />
+            </BrowserRouter>
         </div>
     );
 };
 
 export default RouteSwitch;
-

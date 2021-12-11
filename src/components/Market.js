@@ -1,13 +1,14 @@
-
 import Product from "./Product.js";
 
-
-
-
 function Market(props) {
-    //const [products, setProducts] = useState(inventory);
-    const {products, increment, decrement, handleNumChange, addToCart, removeFromCart} = props
-    
+    const {
+        products,
+        increment,
+        decrement,
+        handleNumChange,
+        addToCart,
+        removeFromCart,
+    } = props;
 
     return (
         <div>
@@ -27,7 +28,6 @@ function Market(props) {
                             isInCart={prod.cart}
                             addToCart={addToCart}
                             removeFromCart={removeFromCart}
-                            
                         />
                     );
                 })}
@@ -36,6 +36,4 @@ function Market(props) {
     );
 }
 
-
-export default Market 
-
+export default Market;

@@ -1,9 +1,7 @@
 import { Link } from "react-router-dom";
 
 function Cart(props) {
-    
-    const { products, inc, handleNumChange, dec } =
-        props;
+    const { products, inc, handleNumChange, dec } = props;
     return (
         <div className="cart">
             <h1>Cart</h1>
@@ -13,11 +11,11 @@ function Cart(props) {
                         return (
                             <li>
                                 <div className="cart-list">
-                                <Link to="/store">
-                                    <img
-                                        alt={`Cover for the book ${prod.title}`}
-                                        src={prod.image}
-                                    ></img>
+                                    <Link to="/store">
+                                        <img
+                                            alt={`Cover for the book ${prod.title}`}
+                                            src={prod.image}
+                                        ></img>
                                     </Link>
                                     <div className="cart-book-info">
                                         <p>
@@ -52,7 +50,9 @@ function Cart(props) {
                 })}
             </ul>
             <button class="purchase">Purchase</button>
-            <button><Link to="/store">Back to the store </Link></button>
+            <button>
+                <Link to="/store">Back to the store </Link>
+            </button>
         </div>
     );
 }

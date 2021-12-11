@@ -12,13 +12,10 @@ function Home() {
                     internationally, with his work translated into 50 languages
                     and selling millions of copies outside Japan.
                 </p>
-               
-                    <button classname="go-to-store">
-                    <Link to="/store">
-                        Purchase Novels Written by Murakami
-                        </Link>
-                    </button>
-                
+
+                <button className="go-to-store">
+                    <Link to="/store">Purchase Novels Written by Murakami</Link>
+                </button>
             </div>
         </div>
     );

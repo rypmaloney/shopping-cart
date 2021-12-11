@@ -1,16 +1,15 @@
-import oneq84 from "../images/1Q84.jpeg"
-import hardboiled from "../images/hardboiled.jpeg"
-import wood from "../images/wood.jpeg"
-import kafka from "../images/kafka.jpeg"
-import tsukuru from "../images/tsukuru.jpeg"
-import dance from "../images/dance.jpeg"
-import sheep from "../images/sheep.jpeg"
-import killing from "../images/killing.jpg"
-import bird from "../images/bird.jpeg"
-import sputnik from "../images/sputnik.jpg"
-import pinball from "../images/pinball.jpeg"
-import south from "../images/south.jpeg"
-
+import oneq84 from "../images/1Q84.jpeg";
+import hardboiled from "../images/hardboiled.jpeg";
+import wood from "../images/wood.jpeg";
+import kafka from "../images/kafka.jpeg";
+import tsukuru from "../images/tsukuru.jpeg";
+import dance from "../images/dance.jpeg";
+import sheep from "../images/sheep.jpeg";
+import killing from "../images/killing.jpg";
+import bird from "../images/bird.jpeg";
+import sputnik from "../images/sputnik.jpg";
+import pinball from "../images/pinball.jpeg";
+import south from "../images/south.jpeg";
 import uniqid from "uniqid";
 
 const inventory = [
@@ -26,7 +25,7 @@ const inventory = [
     },
     {
         title: "Hardboiled Wonderland and the End of the World",
-        id:"hb",
+        id: "hb",
         pages: 1,
         number: 0,
         stock: true,
@@ -95,7 +94,6 @@ const inventory = [
         key: uniqid(),
     },
 
-
     {
         title: "Killing Commendatore",
         id: "killing",
@@ -136,6 +134,5 @@ const inventory = [
         image: south,
         key: uniqid(),
     },
-]
-export default inventory
-
+];
+export default inventory;
