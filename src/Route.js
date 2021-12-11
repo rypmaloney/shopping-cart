@@ -72,9 +72,9 @@ const RouteSwitch = () => {
             <BrowserRouter>
                 <Header count={cartCount} />
                 <Routes>
-                    <Route exact path="/" element={<Home />} />
+                    <Route exact path="/shopping-cart/" element={<Home />} />
                     <Route
-                        path="/store"
+                        path="/shopping-cart/store"
                         element={
                             <Market
                                 products={products}
@@ -89,7 +89,7 @@ const RouteSwitch = () => {
                         }
                     />
                     <Route
-                        path="/cart"
+                        path="shopping-cart/cart"
                         element={
                             <Cart
                                 products={products}
