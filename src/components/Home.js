@@ -14,7 +14,7 @@ function Home() {
                 </p>
 
                 <button className="go-to-store">
-                    <Link to="/store">Purchase Novels Written by Murakami</Link>
+                    <Link to="/shopping-cart/store">Purchase Novels Written by Murakami</Link>
                 </button>
             </div>
         </div>

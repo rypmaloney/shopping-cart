@@ -3,15 +3,15 @@ import { Link } from "react-router-dom";
 function Footer() {
     return (
         <footer>
-            <Link to="/">
+            <Link to="/shopping-cart/">
                 <p>Home</p>
             </Link>
 
-            <Link to="/store">
+            <Link to="/shopping-cart/store">
                 <p>Store</p>
             </Link>
 
-            <Link to="/cart">
+            <Link to="/shopping-cart/cart">
                 <p>Cart</p>
             </Link>
         </footer>

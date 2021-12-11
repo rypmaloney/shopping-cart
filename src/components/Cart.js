@@ -11,7 +11,7 @@ function Cart(props) {
                         return (
                             <li>
                                 <div className="cart-list">
-                                    <Link to="/store">
+                                    <Link to="shopping-cart/store">
                                         <img
                                             alt={`Cover for the book ${prod.title}`}
                                             src={prod.image}
@@ -51,7 +51,7 @@ function Cart(props) {
             </ul>
             <button class="purchase">Purchase</button>
             <button>
-                <Link to="/store">Back to the store </Link>
+                <Link to="shopping-cart/store">Back to the store </Link>
             </button>
         </div>
     );
