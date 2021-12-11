@@ -1,9 +1,13 @@
 function Header(props) {
-    const {count} = props
+    const { count } = props;
     return (
         <header>
-            <h1>Murakami Library</h1>
-            <p>{count}</p>
+            
+                <h1><a href="/">Murakami Library</a></h1>
+            
+            <a href="/cart">
+                <p>Cart: {count}</p>
+            </a>
         </header>
     );
 }

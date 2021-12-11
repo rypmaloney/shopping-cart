@@ -1,7 +1,6 @@
 
 import Product from "./Product.js";
-import Header from "./Header.js";
-//import inventory from "./inventory.js";
+
 
 
 function Market(props) {
@@ -11,7 +10,6 @@ function Market(props) {
 
     return (
         <div>
-            <Header />
             <div className="market">
                 <h1>Purchase novels by Haruki Murakami:</h1>
                 {products.map((prod) => {
