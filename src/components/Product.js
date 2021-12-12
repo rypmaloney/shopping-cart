@@ -40,6 +40,7 @@ function Product(props) {
                 <input
                     name={id}
                     type="number"
+                    min="0"
                     value={num}
                     onChange={handleNumChange}
                 ></input>

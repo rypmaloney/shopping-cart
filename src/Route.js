@@ -42,7 +42,7 @@ const RouteSwitch = () => {
     };
     const decrement = (e) => {
         let productsEditor = [...products];
-        productsEditor[findBookIndex(e)].number--;
+        if (productsEditor[findBookIndex(e)].number>=1){productsEditor[findBookIndex(e)].number--};
         setProducts(productsEditor);
     };
     const handleNumChange = (e) => {
