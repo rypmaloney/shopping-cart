@@ -51,7 +51,7 @@ function Cart(props) {
             </ul>
             <button class="purchase">Purchase</button>
             <button>
-                <Link to="shopping-cart/store">Back to the store </Link>
+                <Link to="/shopping-cart/store">Back to the store </Link>
             </button>
         </div>
     );

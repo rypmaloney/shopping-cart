@@ -89,7 +89,7 @@ const RouteSwitch = () => {
                         }
                     />
                     <Route
-                        path="shopping-cart/cart"
+                        path="/shopping-cart/cart"
                         element={
                             <Cart
                                 products={products}
