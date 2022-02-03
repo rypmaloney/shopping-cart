@@ -49,7 +49,7 @@ function Cart(props) {
                     } else return null;
                 })}
             </ul>
-            <button class="purchase">Purchase</button>
+            <button className="purchase">Purchase</button>
             <button>
                 <Link to="/shopping-cart/store">Back to the store </Link>
             </button>
